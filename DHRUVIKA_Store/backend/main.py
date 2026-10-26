@@ -9,7 +9,20 @@ from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent
+
+# Frontend directory: check multiple possible locations
+_candidates = [
+    ROOT.parent / "frontend",           # ../frontend (local dev layout)
+    ROOT / "frontend",                  # ./frontend (same-dir layout)
+    Path(os.getenv("FRONTEND_DIR", "")) if os.getenv("FRONTEND_DIR") else None,
+]
 PROJECT = ROOT.parent
+FRONTEND_DIR: Optional[Path] = None
+for _c in _candidates:
+    if _c and Path(_c).is_dir():
+        FRONTEND_DIR = Path(_c)
+        break
+
 load_dotenv(ROOT / ".env")
 
 from odoo_client import odoo_client
@@ -285,9 +298,30 @@ def checkout(payload: Checkout):
         "message": "Order created. Please complete payment."
     }
 
-# Serve the static frontend from the project folder.
-app.mount("/assets", StaticFiles(directory=PROJECT / "frontend"), name="assets")
+# Serve the static frontend — only mount if the folder actually exists.
+if FRONTEND_DIR and FRONTEND_DIR.is_dir():
+    app.mount("/assets", StaticFiles(directory=FRONTEND_DIR), name="assets")
 
-@app.get("/")
-def home():
-    return FileResponse(PROJECT / "frontend" / "index.html")
+    @app.get("/")
+    def home():
+        index = FRONTEND_DIR / "index.html"
+        if index.is_file():
+            return FileResponse(index)
+        raise HTTPException(404, "index.html not found in frontend directory.")
+else:
+    import warnings
+    warnings.warn(
+        f"[CheerSagar] Frontend directory not found (checked: {_candidates}). "
+        "Static files and homepage will NOT be served. "
+        "Set FRONTEND_DIR env var to the correct path if needed.",
+        RuntimeWarning
+    )
+
+    @app.get("/")
+    def home_fallback():
+        return {
+            "service": "Cheer Sagar Store API",
+            "status": "running",
+            "note": "Frontend not found. Set FRONTEND_DIR or run from the correct working directory.",
+            "api_docs": "/docs"
+        }
