@@ -1,0 +1,19 @@
+{
+  "name": "Cheer Sagar",
+  "product": "Dhruvika",
+  "odoo": {
+    "domain": "cheersagar.odoo.com",
+    "database": "cheersagar",
+    "integration": "XML-RPC API (auto customer & sales order sync)"
+  },
+  "stack": {
+    "frontend": "HTML, CSS, vanilla JavaScript",
+    "backend": "FastAPI",
+    "database": "SQLite",
+    "erp": "Odoo (cheersagar.odoo.com)",
+    "payments": "Direct UPI (9955303969) + QR Code + WhatsApp + Razorpay scaffold"
+  },
+  "run": "Double-click run.bat"
+}
+
+}

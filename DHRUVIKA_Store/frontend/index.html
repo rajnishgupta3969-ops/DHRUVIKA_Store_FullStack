@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f3e9">
+  <meta name="description" content="Cheer Sagar — thoughtfully chosen natural sweetness with Dhruvika for your everyday pantry.">
+  <title>Cheer Sagar — Dhruvika</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A LITTLE MORE NATURAL IN EVERYDAY LIFE <span>✳</span> MADE FOR YOUR PANTRY</div>
+  <header class="header">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <a class="brand" href="#" aria-label="Cheer Sagar home"><span class="brand-mark">C</span><span>CHEER SAGAR<small>NATURAL PANTRY</small></span></a>
+    <nav id="nav"><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#goodness">The Goodness</a><a href="#faq">FAQs</a></nav>
+    <button class="cart-trigger" id="openCart" aria-label="Open shopping cart">Bag <span id="cartCount">0</span> <span class="bag-icon">↗</span></button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sun">✳</span> A MORE THOUGHTFUL SWEETNESS</div>
+        <h1>Rooted in nature.<br><em>Made for everyday.</em></h1>
+        <p>Bring home the warm, familiar taste of Dhruvika — an easy pantry swap for your everyday recipes.</p>
+        <div class="hero-actions"><a class="btn btn-dark" href="#shop">Shop Dhruvika <span>↗</span></a><a class="text-link" href="#story">Get to know us <span>→</span></a></div>
+        <div class="hero-trust"><span>✳ Thoughtfully packed</span><span>✳ Everyday versatility</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image" role="img" aria-label="Jaggery and natural ingredients on a warm kitchen table"></div>
+        <div class="round-stamp"><span>GOODNESS</span><strong>from<br>the earth</strong><span>✳ SINCE DAY ONE ✳</span></div>
+        <div class="image-note">THE SIMPLE THINGS, DONE WELL <span>01 / 03</span></div>
+      </div>
+    </section>
+    <div class="ticker"><span>GOOD FOOD, GOOD MOOD</span><b>✳</b><span>ROOTED IN TRADITION</span><b>✳</b><span>MADE FOR YOUR EVERYDAY</span><b>✳</b><span>GOOD FOOD, GOOD MOOD</span></div>
+    <section class="shop-section section" id="shop">
+      <div class="section-heading"><div><div class="eyebrow">YOUR PANTRY, REIMAGINED</div><h2>A sweeter kind of <em>simple.</em></h2></div><a href="#products" class="text-link">Explore the collection ↗</a></div>
+      <div class="product-layout">
+        <div class="product-main-image"><img id="mainProductImage" src="/assets/product.png" alt="Dhruvika natural sweetness styled for Cheer Sagar"><span class="image-badge">PANTRY FAVOURITE</span><div class="image-caption">CHEER SAGAR PANTRY SERIES <span>✳</span></div></div>
+        <div class="product-detail">
+          <div class="product-kicker">CHEER SAGAR · ORGANIC PANTRY</div><div class="rating">★★★★★ <span>100% Natural & Chemical Free</span></div>
+          <h3 id="productName">Dhruvika Organic Jaggery Powder</h3><p class="product-intro">Pure nature sweetness — crafted with 100% natural jaggery through a chemical-free process with no added sugar.</p>
+          <div class="price-line"><strong id="productPrice">₹149</strong><del id="comparePrice">₹179</del><span class="discount" id="discount">SAVE 17%</span></div>
+          <p class="tax-note">Inclusive of all taxes · Shipping calculated at checkout</p>
+          <div class="option-title">CHOOSE YOUR PACK <span id="selectedWeight">500 g</span></div>
+          <div class="pack-options" id="packOptions">
+            <button class="pack active" data-id="dhruvika-500"><strong>500 g</strong><small>Try me</small></button>
+            <button class="pack" data-id="dhruvika-1kg"><strong>1 kg</strong><small>Pouch as shown</small></button>
+            <button class="pack" data-id="dhruvika-combo"><strong>2 × 500 g</strong><small>Better value</small></button>
+          </div>
+          <div class="buy-row"><div class="quantity"><button id="minus" aria-label="Decrease quantity">−</button><span id="quantity">1</span><button id="plus" aria-label="Increase quantity">+</button></div><button class="btn btn-dark add-btn" id="addToCart">Add to bag <span>↗</span></button></div>
+          <button class="btn btn-outline full" id="buyNow">Buy now</button>
+          <div class="shipping-points"><div><span>🌿</span><p><b>100% Natural Jaggery</b><small>Pure unrefined sugarcane</small></p></div><div><span>✨</span><p><b>Chemical Free Process</b><small>Traditional clean crafting</small></p></div><div><span>🌱</span><p><b>No Added Sugar</b><small>Zero artificial additives</small></p></div></div>
+          <div class="accordions"><details open><summary>Product details <span>＋</span></summary><p id="productDescription">Dhruvika Organic Jaggery Powder delivers pure nature sweetness. Made with 100% natural sugarcane using a chemical-free process and containing zero added sugar. An ideal healthy replacement for white sugar in chai, desserts, baking, and daily cooking.</p></details><details><summary>How to enjoy <span>＋</span></summary><p>Stir into morning tea, coffee, warm milk, use in baking, or add to porridge, halwa and homemade sweets. Adjust to taste.</p></details><details><summary>Storage & delivery <span>＋</span></summary><p>Store in a cool, dry place away from direct sunlight and keep the zip-lock sealed after opening. Fast dispatch across India.</p></details></div>
+        </div>
+      </div>
+    </section>
+    <section class="goodness section" id="goodness"><div class="goodness-image"></div><div class="goodness-copy"><div class="eyebrow">THE LITTLE THINGS MATTER</div><h2>Everyday rituals,<br><em>a little more rooted.</em></h2><p>From your morning cup to a favourite family recipe, Cheer Sagar brings you Dhruvika to make pantry choices feel thoughtful, familiar and easy.</p><div class="goodness-list"><div><span>01</span><p><b>Familiar flavour</b><small>A rich, warm taste that fits recipes you already love.</small></p></div><div><span>02</span><p><b>Easy to use</b><small>A powder format that blends into everyday cooking.</small></p></div><div><span>03</span><p><b>Made for your shelf</b><small>A pantry staple designed to be reached for often.</small></p></div></div><a href="#shop" class="btn btn-light">Find your pack ↗</a></div></section>
+    <section class="story section" id="story"><div class="story-leaf">✳</div><div class="eyebrow">A NOTE FROM CHEER SAGAR</div><h2>Not just what we eat.<br><em>How it makes us feel.</em></h2><p>We believe the best everyday choices don't need to be complicated. Cheer Sagar brings a little warmth to your kitchen with Dhruvika, offering a pantry-first approach, honest product information and thoughtful details at every step.</p><a href="#shop" class="text-link">Bring home Dhruvika ↗</a></section>
+    <section class="reviews section"><div class="eyebrow">KIND WORDS, WHEN THEY COME</div><h2>Your kitchen stories <em>belong here.</em></h2><p class="review-note">Customer reviews will appear here once verified reviews are collected. We don't publish made-up testimonials.</p></section>
+    <section class="faq section" id="faq"><div><div class="eyebrow">GOOD TO KNOW</div><h2>A few things<br><em>you might wonder.</em></h2></div><div class="faq-list"><details><summary>What can I use jaggery powder for? <span>＋</span></summary><p>Use it in tea, coffee, desserts, porridge, baking and other recipes where its flavour works well. Adjust sweetness to taste.</p></details><details><summary>How should I store it? <span>＋</span></summary><p>Keep the pack sealed and store it in a cool, dry place, away from moisture.</p></details><details><summary>How do I place an order? <span>＋</span></summary><p>Choose a pack, add it to your bag, enter your delivery details and continue to checkout. Online payment is enabled once the store owner configures a payment gateway.</p></details><details><summary>Is this website ready to accept live payments? <span>＋</span></summary><p>The starter supports a Razorpay integration path. The store owner must add valid server-side keys and complete payment verification before accepting live payments.</p></details></div></section>
+  </main>
+  <footer><div class="footer-top"><a class="brand brand-footer" href="#"><span class="brand-mark">C</span><span>CHEER SAGAR<small>NATURAL PANTRY</small></span></a><div class="footer-message">A little more natural<br><em>in everyday life.</em></div><a class="back-top" href="#">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© 2026 CHEER SAGAR</span><span>Thoughtfully made for your everyday.</span><span><a href="#faq">FAQs</a> · <a href="mailto:hello@cheersagar.example">Contact</a> · <a href="javascript:void(0)" id="odooModalTrigger" style="color:var(--green);font-weight:600;text-decoration:underline;">⚡ Odoo ERP (cheersagar.odoo.com)</a></span></div></footer>
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag"><div class="drawer-head"><div><div class="eyebrow">YOUR GOODNESS, GATHERED</div><h3>Your bag <span id="drawerCount">(0)</span></h3></div><button id="closeCart" aria-label="Close cart">×</button></div><div id="cartItems" class="cart-items"><div class="empty-cart">Your bag is waiting for something good. <a href="#shop" id="continueShopping">Explore the collection ↗</a></div></div><div class="drawer-bottom"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><p>Shipping is calculated at checkout.</p><button class="btn btn-dark full" id="checkoutBtn">Continue to checkout ↗</button><small>Secure checkout · Payment options shown at checkout</small></div></aside>
+  <div class="modal-backdrop" id="checkoutBackdrop"><section class="checkout-modal"><div class="modal-head"><div><div class="eyebrow" id="checkoutEyebrow">ALMOST AT YOUR DOOR</div><h3 id="checkoutTitle">Checkout</h3></div><button id="closeCheckout" aria-label="Close checkout">×</button></div><form id="checkoutForm"><div class="form-grid"><label>Full name<input name="customer_name" required minlength="2" autocomplete="name" placeholder="Your name"></label><label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label><label>Phone number<input name="phone" required minlength="8" autocomplete="tel" placeholder="Mobile number"></label><label class="PIN code" style="font-size:10px;font-weight:600;display:flex;flex-direction:column;gap:7px;">PIN code<input name="postal_code" required minlength="5" maxlength="10" autocomplete="postal-code" placeholder="Delivery PIN code"></label><label class="wide">Delivery address<textarea name="address" required minlength="5" autocomplete="street-address" placeholder="House, street, area"></textarea></label><label class="wide">City<input name="city" required autocomplete="address-level2" placeholder="City"></label></div><div class="checkout-summary"><span>Order total</span><strong id="checkoutTotal">₹0</strong></div><button class="btn btn-dark full" id="payButton" type="submit">Place Order & Pay via UPI (9955303969) ↗</button><p class="secure-note" id="checkoutNote">Pay directly to Cheer Sagar on 9955303969 via any UPI App (GPay, PhonePe, Paytm).</p><div id="checkoutMessage" role="status"></div></form><div id="upiPaymentSection" style="display:none;"></div></section></div>
+  <div class="modal-backdrop" id="odooBackdrop"><section class="checkout-modal" style="max-width:540px;"><div class="modal-head"><div><div class="eyebrow">ENTERPRISE RESOURCE PLANNING</div><h3>Odoo ERP Sync</h3></div><button id="closeOdoo" aria-label="Close Odoo modal">×</button></div><div style="padding:15px 0;"><div style="background:#f4f1e6;border:1px solid var(--line);padding:14px;margin-bottom:14px;"><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span>Target Domain:</span><strong style="color:var(--green);"><a href="https://cheersagar.odoo.com" target="_blank" rel="noopener">cheersagar.odoo.com ↗</a></strong></div><div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span>Database Name:</span><strong>cheersagar</strong></div><div style="display:flex;justify-content:space-between;"><span>Live Status:</span><span id="odooStatusBadge" style="font-weight:600;color:var(--orange);">Checking...</span></div></div><div id="odooStatusDetail" style="font-size:11px;line-height:1.6;color:var(--muted);margin-bottom:15px;"></div><div style="display:flex;gap:10px;"><button class="btn btn-outline" id="checkOdooBtn" style="flex:1;">🔄 Check Live Connection</button><a class="btn btn-dark" href="https://www.odoo.com/trial?selected_app=website,sale_management" target="_blank" rel="noopener" style="flex:1;text-align:center;">Create Domain on Odoo ↗</a></div><div class="upi-steps" style="margin-top:16px;"><b>Domain Setup Steps (Cheersagar):</b><ol><li>Odoo par jayein: <b>https://www.odoo.com/trial</b></li><li>Apps chunein (Website + Sales) aur <b>Continue</b> dabayein.</li><li>Company Name mein likhein: <b>Cheersagar</b> (Domain banega: <code>cheersagar.odoo.com</code>).</li><li>Register karne ke baad Odoo Profile &gt; Account Security se <b>New API Key</b> banayein.</li><li><code>backend/.env</code> mein <code>ODOO_USERNAME</code> aur <code>ODOO_API_KEY</code> save karein.</li></ol></div></div></section></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/assets/app.js"></script>
+</body></html>
